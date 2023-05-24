@@ -1,0 +1,20 @@
+.navbar {
+  background-color: #424242;
+  padding: 10px;
+}
+
+.navbarList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.navbarItem {
+  margin: 0 10px;
+}
+
+.navbarItem a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
