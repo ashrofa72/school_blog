@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
-import { connectToDatabase } from '../../lib/mongodb';
+import { connectToDatabase } from '../../utils/mongodb';
 const ObjectId = require('mongodb').ObjectId;
 
 const BlogDetail = ({ posts }) => {
