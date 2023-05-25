@@ -10,6 +10,11 @@ export default function BlogsPage({ blogs }) {
   //const [deleting, setDeleting] = useState(false);
   // const [message, setMessage] = useState('');
   const router = useRouter();
+  // handle detail
+  const handledetail = async (blogId) => {
+    router.push(`/blogs/id?_id=${blogId}`);
+    console.log(blogId);
+  };
   // Delete post
   const deleteBlog = async (blogId) => {
     console.log(blogId);
@@ -37,7 +42,7 @@ export default function BlogsPage({ blogs }) {
           <div key={blog._id} className={styles.blog}>
             <h2 className={styles.blogtitle}>{blog.title}</h2>
             <p className={styles.blogcontent}>{blog.content}</p>
-            <Link href={`/api/searchById?_id=${blog._id}`}>
+            <Link href={`/api/searchById?id=${blog._id}`}>
               {blog.image && (
                 <Image
                   className={styles.blogimage}
@@ -48,13 +53,20 @@ export default function BlogsPage({ blogs }) {
                 />
               )}
             </Link>
-            <button
-              className={styles.uploadButton}
-              onClick={() => deleteBlog(blog['_id'])}
-            >
-              Delete
-            </button>
-            {/*<p>{blog.image}</p>*/}
+            <div className={styles.buttons}>
+              <button
+                className={styles.uploadButton}
+                onClick={() => handledetail(blog._id)}
+              >
+                التفاصيل
+              </button>
+              <button
+                className={styles.uploadButton}
+                onClick={() => deleteBlog(blog['_id'])}
+              >
+                حذف
+              </button>
+            </div>
           </div>
         ))
       )}
