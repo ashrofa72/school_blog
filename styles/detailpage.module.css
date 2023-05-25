@@ -18,6 +18,7 @@
 }
 .container img {
   border: 2px solid black;
+  text-align: center;
 }
 .uploadButton {
   padding: 10px 20px;
