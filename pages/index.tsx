@@ -48,7 +48,12 @@ export default function Home() {
   />*/}
         <h1
           className={almarai.className}
-          style={{ fontSize: '30px', color: 'black' }}
+          style={{
+            fontSize: '30px',
+            color: 'black',
+            direction: 'rtl',
+            textAlign: 'center',
+          }}
         >
           مدرسة فاطمة الزهراء الثانوية بنات بقنا
         </h1>
