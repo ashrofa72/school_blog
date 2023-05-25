@@ -14,10 +14,10 @@ export default async function handler(req, res) {
 async function getPosts(req, res) {
   try {
     let { db } = await connectToDatabase();
-    let id = req.query;
+    let { id } = req.query;
     let post = await db
       .collection('blog')
-      .find({ _id: ObjectId(id) })
+      .find({ _id: new ObjectId(id) })
       .sort({ published: -1 })
       .toArray();
     return res.json({

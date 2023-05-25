@@ -29,7 +29,7 @@ export default function BlogsPage({ blogs }) {
   };
   return (
     <div className={styles.container}>
-      <h1>الأخبار والنشرات في المدرسة</h1>
+      <h1>الأخبار والنشرات الخاصة بالمدرسة</h1>
       {blogs.length === 0 ? (
         <p className={styles.noblogsmessage}>No blogs available.</p>
       ) : (
@@ -54,7 +54,7 @@ export default function BlogsPage({ blogs }) {
             >
               Delete
             </button>
-            <p>{blog.image}</p>
+            {/*<p>{blog.image}</p>*/}
           </div>
         ))
       )}
