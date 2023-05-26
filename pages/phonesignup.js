@@ -38,7 +38,7 @@ const PhoneSignUp = () => {
     if (otp === '' || otp === null) return;
     try {
       await result.confirm(otp);
-      router.push('/blogs');
+      router.push('/Home');
     } catch (err) {
       setError(err.message);
     }

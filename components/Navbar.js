@@ -34,6 +34,7 @@ const Navbar = () => {
         <li className={styles.navbarItem}>
           <Link href="/blogs">Blogs</Link>
         </li>
+
         {!user && (
           <li className={styles.navbarItem}>
             <Link href="/login">Login</Link>
