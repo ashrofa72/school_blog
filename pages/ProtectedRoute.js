@@ -5,7 +5,7 @@ const ProtectedRoute = ({ children }) => {
   const { user } = useUserAuth();
   const router = useRouter();
   if (!user) {
-    router.push('/login');
+    router.push('/phonesignup');
   }
   return children;
 };

@@ -6,6 +6,7 @@ import { Button } from 'react-bootstrap';
 import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
 import { useUserAuth } from '../context/UserAuthContext';
+import styles from '../styles/phonesignup.module.css';
 
 const PhoneSignUp = () => {
   const [error, setError] = useState('');
@@ -44,52 +45,57 @@ const PhoneSignUp = () => {
   };
 
   return (
-    <>
-      <div style={{ height: '100vh' }}>
-        <h2 className="mb-3">Firebase Phone Auth</h2>
-        {error && <Alert variant="danger">{error}</Alert>}
-        <Form onSubmit={getOtp} style={{ display: !flag ? 'block' : 'none' }}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <PhoneInput
-              defaultCountry="EG"
-              value={number}
-              onChange={setNumber}
-              placeholder="Enter Phone Number"
-            />
-            <div id="recaptcha-container"></div>
-          </Form.Group>
-          <div className="button-right">
-            {/* <Link href="/blogs">
-              <Button variant="danger">Cancel</Button>
-  </Link>*/}
-            &nbsp;
-            <Button type="submit" variant="primary">
-              Send Otp
-            </Button>
-          </div>
-        </Form>
+    <div className={styles.container}>
+      <h2 className="mb-3">تسجيل الدخول برقم الموبايل</h2>
+      {error && <Alert variant="danger">{error}</Alert>}
+      <Form onSubmit={getOtp} style={{ display: !flag ? 'block' : 'none' }}>
+        <Form.Group className={styles.formgroup} controlId="formBasicEmail">
+          <PhoneInput
+            defaultCountry="EG"
+            value={number}
+            onChange={setNumber}
+            placeholder="Enter Phone Number"
+          />
+          <div id="recaptcha-container"></div>
+        </Form.Group>
+        <div className={styles.btnarea}>
+          <Button
+            className={styles.mybuttons}
+            onClick={(e) => router.push('/')}
+            variant="danger"
+          >
+            إلغاء
+          </Button>
 
-        <Form onSubmit={verifyOtp} style={{ display: flag ? 'block' : 'none' }}>
-          <Form.Group className="mb-3" controlId="formBasicOtp">
-            <Form.Control
-              type="otp"
-              placeholder="Enter OTP"
-              onChange={(e) => setOtp(e.target.value)}
-            />
-          </Form.Group>
-          <div className="button-right">
-            <Button onClick={(e) => router.push('/login')} variant="secondary">
-              Cancel
-            </Button>
-            &nbsp;
-            <Button type="submit" variant="primary">
-              Verify
-            </Button>
+          <Button className={styles.mybuttons} type="submit" variant="primary">
+            إرسال الرمز
+          </Button>
+        </div>
+      </Form>
+
+      <Form onSubmit={verifyOtp} style={{ display: flag ? 'block' : 'none' }}>
+        <Form.Group className={styles.formgroup} controlId="formBasicOtp">
+          <Form.Control
+            type="otp"
+            placeholder="Enter OTP"
+            onChange={(e) => setOtp(e.target.value)}
+          />
+        </Form.Group>
+        <Form.Group>
+          <div className={styles.btnarea}>
+            <button
+              className={styles.mybuttons}
+              onClick={(e) => router.push('/')}
+            >
+              إلغاء
+            </button>
+            <button className={styles.mybuttons} type="submit">
+              تأكيد الرمز
+            </button>
           </div>
-        </Form>
-      </div>
-    </>
+        </Form.Group>
+      </Form>
+    </div>
   );
 };
-
 export default PhoneSignUp;

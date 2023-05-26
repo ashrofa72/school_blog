@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-
+import styles from '../styles/login.module.css';
 import { useRouter } from 'next/router';
 import { Form, Alert } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
-import GoogleButton from 'react-google-button';
+
 import { useUserAuth } from '../context/UserAuthContext';
 
 const Login = () => {
@@ -11,6 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const { logIn, googleSignIn } = useUserAuth();
+  const { user } = useUserAuth();
   const router = useRouter();
 
   const handleSubmit = async (e) => {
@@ -18,7 +18,7 @@ const Login = () => {
     setError('');
     try {
       await logIn(email, password);
-      router.push('/blogs');
+      router.push('/');
     } catch (err) {
       setError(err.message);
     }
@@ -36,11 +36,11 @@ const Login = () => {
 
   return (
     <>
-      <div className="p-4 box">
-        <h2 className="mb-3">Firebase Auth Login</h2>
+      <div className={styles.container}>
+        <h2>تسجيل دخول النظام</h2>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className={styles.formgroup} controlId="formBasicEmail">
             <Form.Control
               type="email"
               placeholder="Email address"
@@ -48,7 +48,10 @@ const Login = () => {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group
+            className={styles.formgroup}
+            controlId="formBasicPassword"
+          >
             <Form.Control
               type="password"
               placeholder="Password"
@@ -56,26 +59,20 @@ const Login = () => {
             />
           </Form.Group>
 
-          <div className="d-grid gap-2">
-            <Button variant="primary" type="Submit">
-              Log In
-            </Button>
+          <div className={styles.butarea}>
+            <button className={styles.buttons} type="Submit">
+              تسجيل دخول بالإيميل
+            </button>
           </div>
         </Form>
         <hr />
-        <div>
-          <GoogleButton
-            className="g-btn"
-            type="dark"
-            onClick={handleGoogleSignIn}
-          />
-        </div>
-        <div>
+
+        <div className={styles.butarea}>
           <button
-            className="btn-success"
+            className={styles.buttons}
             onClick={(e) => router.push('/phonesignup')}
           >
-            PhoneSignUp
+            تسجيل دخول برقم الموبايل
           </button>
         </div>
       </div>
