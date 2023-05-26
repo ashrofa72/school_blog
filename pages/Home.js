@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import { useUserAuth } from '../context/UserAuthContext';
-import { auth } from '../firebase';
+import { auth } from '../config/firebase';
 
 const Home = () => {
   const { logOut, user } = useUserAuth();
