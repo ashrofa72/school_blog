@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap');
 .container {
+  height: 80vh;
   max-width: 400px;
   margin: 30px auto;
   padding: 20px;
@@ -55,4 +56,5 @@
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  direction: rtl;
 }

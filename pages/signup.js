@@ -33,7 +33,7 @@ const Signup = () => {
           <Form.Group className={styles.formgroup} controlId="formBasicEmail">
             <Form.Control
               type="email"
-              placeholder="Email address"
+              placeholder="البريد الإلكتروني"
               onChange={(e) => setEmail(e.target.value)}
             />
           </Form.Group>
@@ -44,17 +44,29 @@ const Signup = () => {
           >
             <Form.Control
               type="password"
-              placeholder="Password"
+              placeholder="كلمة المرور"
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
+
           <Form.Group
             className={styles.formgroup}
             controlId="formBasicPassword"
           >
             <Form.Control
               type="text"
-              placeholder="DisplayName"
+              placeholder="رقم الموبايل"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </Form.Group>
+
+          <Form.Group
+            className={styles.formgroup}
+            controlId="formBasicPassword"
+          >
+            <Form.Control
+              type="text"
+              placeholder="اسم المستخدم"
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
