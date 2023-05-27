@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { Form, Alert } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { useUserAuth } from '../context/UserAuthContext';
+import styles from '../styles/signup.module.css';
 
 const Signup = () => {
   const [email, setEmail] = useState('');
@@ -25,11 +26,11 @@ const Signup = () => {
 
   return (
     <>
-      <div className="p-4 box">
-        <h2 className="mb-3">Firebase Auth Signup</h2>
+      <div className={styles.container}>
+        <h2 className="mb-3">تسجيل حساب في المنصة</h2>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className={styles.formgroup} controlId="formBasicEmail">
             <Form.Control
               type="email"
               placeholder="Email address"
@@ -37,23 +38,36 @@ const Signup = () => {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group
+            className={styles.formgroup}
+            controlId="formBasicPassword"
+          >
             <Form.Control
               type="password"
               placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
+          <Form.Group
+            className={styles.formgroup}
+            controlId="formBasicPassword"
+          >
+            <Form.Control
+              type="text"
+              placeholder="DisplayName"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </Form.Group>
 
-          <div className="d-grid gap-2">
-            <Button variant="primary" type="Submit">
-              Sign up
+          <div className={styles.butarea}>
+            <Button className={styles.buttons} variant="primary" type="Submit">
+              تسجيل
             </Button>
           </div>
         </Form>
       </div>
       <div className="p-4 box mt-3 text-center">
-        Already have an account? <Link href="/login">Log In</Link>
+        Already have an account? <Link href="/login">LogIn</Link>
       </div>
     </>
   );
