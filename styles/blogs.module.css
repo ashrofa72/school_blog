@@ -28,10 +28,12 @@
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .blogcontent {
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .blogimage {

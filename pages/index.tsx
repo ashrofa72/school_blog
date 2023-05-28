@@ -71,8 +71,8 @@ export default function Home() {
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            صفحة تهتم بإعلانات المدرسة والأعلانات الخارجية للمجتمع
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-center`}>
+            صفحة تهتم بإعلانات المدرسة والإعلانات الخارجية للمجتمع
           </p>
         </a>
 
@@ -88,7 +88,7 @@ export default function Home() {
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-center`}>
             صفحة تهتم بالطالبات وخدماتهم المدرسية&nbsp;والإجتماعية
           </p>
         </a>
@@ -105,7 +105,7 @@ export default function Home() {
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-center`}>
             صفحة تهتم بأمور المعلمين في المدرسة&nbsp;وخدماتهم
           </p>
         </a>
@@ -122,7 +122,7 @@ export default function Home() {
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-center`}>
             صفحة تهتم بأخبار المدرسة وجميع أنشطة المدرسة الأخرى
           </p>
         </a>
