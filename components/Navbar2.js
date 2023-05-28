@@ -133,13 +133,11 @@ function ResponsiveAppBar() {
                     </Typography>
                   </MenuItem>
                 )}
+
                 {user && (
-                  <MenuItem
-                    key={4}
-                    onClick={(e) => router.push('/cloudupload')}
-                  >
+                  <MenuItem key={4} onClick={(e) => router.push('/blogform')}>
                     <Typography textAlign="center" fontWeight="bold">
-                      رفع الصورة
+                      انشاء
                     </Typography>
                   </MenuItem>
                 )}
@@ -213,6 +211,20 @@ function ResponsiveAppBar() {
                   الأخبار
                 </Button>
               )}
+              {user && (
+                <Button
+                  sx={{
+                    my: 2,
+                    color: 'white',
+                    display: 'block',
+                    fontWeight: 'bold',
+                    fontSize: '18px',
+                  }}
+                  onClick={(e) => router.push('/blogform')}
+                >
+                  انشاء
+                </Button>
+              )}
 
               {user && (
                 <Button
@@ -226,20 +238,6 @@ function ResponsiveAppBar() {
                   onClick={(e) => router.push('/about')}
                 >
                   حول
-                </Button>
-              )}
-              {user && (
-                <Button
-                  sx={{
-                    my: 2,
-                    color: 'white',
-                    display: 'block',
-                    fontWeight: 'bold',
-                    fontSize: '18px',
-                  }}
-                  onClick={(e) => router.push('/cloudupload')}
-                >
-                  رفع الصورة
                 </Button>
               )}
 
