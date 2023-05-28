@@ -72,12 +72,12 @@ function ResponsiveAppBar() {
             {/*--------------------------------------------------------------------------------------*/}
             {/* Minmized header menu left side*/}
             <Typography
-              variant="h6"
+              variant="h8"
               noWrap
               component="a"
               href="/"
               sx={{
-                mr: 2,
+                mr: -4,
                 display: { xs: 'none', md: 'flex' },
                 fontFamily: 'monospace',
                 fontWeight: 700,
@@ -161,17 +161,18 @@ function ResponsiveAppBar() {
             </Box>
             {/*--------------------------------------------------------------------------------------*/}
             {/* Main header full size */}
-            <SchoolIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+            <SchoolIcon sx={{ display: { xs: 'none', md: 'none' }, mr: 3 }} />
             <Typography
-              variant="h6"
+              variant="h4"
               noWrap
               component="a"
               href="/"
               sx={{
-                mr: 1,
+                mr: -4,
                 display: { xs: 'flex', md: 'none' },
                 flexGrow: 1,
                 fontFamily: 'monospace',
+                fontSize: '10px',
                 fontWeight: 700,
                 letterSpacing: '.3rem',
                 color: 'inherit',

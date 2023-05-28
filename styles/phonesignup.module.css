@@ -9,9 +9,10 @@
   align-content: center;
 }
 .container h2 {
-  font-size: 30px;
+  font-size: 20px;
   font-family: 'Almarai';
   margin-bottom: 30px;
+  text-align: center;
 }
 .formgroup {
   margin-bottom: 20px;

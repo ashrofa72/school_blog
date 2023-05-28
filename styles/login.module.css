@@ -13,6 +13,7 @@
 .container h2 {
   font-size: 30px;
   margin-bottom: 20px;
+  text-align: center;
 }
 .buttons {
   background-color: #0070f3;

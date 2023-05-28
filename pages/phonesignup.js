@@ -46,7 +46,7 @@ const PhoneSignUp = () => {
 
   return (
     <div className={styles.container}>
-      <h2 className="mb-3">تسجيل الدخول برقم الموبايل</h2>
+      <h2>تسجيل الدخول برقم الموبايل</h2>
       {error && <Alert variant="danger">{error}</Alert>}
       <Form onSubmit={getOtp} style={{ display: !flag ? 'block' : 'none' }}>
         <Form.Group className={styles.formgroup} controlId="formBasicEmail">
