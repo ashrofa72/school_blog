@@ -72,7 +72,7 @@ export default function Home() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+            صفحة تهتم بإعلانات المدرسة والأعلانات الخارجية للمجتمع
           </p>
         </a>
 
@@ -89,7 +89,7 @@ export default function Home() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+            صفحة تهتم بالطالبات وخدماتهم المدرسية&nbsp;والإجتماعية
           </p>
         </a>
 
@@ -106,7 +106,7 @@ export default function Home() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
+            صفحة تهتم بأمور المعلمين في المدرسة&nbsp;وخدماتهم
           </p>
         </a>
 
@@ -123,7 +123,7 @@ export default function Home() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+            صفحة تهتم بأخبار المدرسة وجميع أنشطة المدرسة الأخرى
           </p>
         </a>
       </div>
