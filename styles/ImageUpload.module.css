@@ -4,6 +4,12 @@
   padding: 20px;
   font-weight: bold;
   height: 85vh;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 }
 .container h1 {
   margin-bottom: 20px;
