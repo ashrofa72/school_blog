@@ -1,5 +1,5 @@
 .container {
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 20px;
   font-weight: bold;
@@ -10,6 +10,16 @@
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+  background-color: aquamarine;
+}
+.formcontainer {
+  max-width: 300px;
+  background-color: #007bff;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .container h1 {
   margin-bottom: 20px;

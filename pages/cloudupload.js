@@ -39,16 +39,18 @@ export default function ImageUpload() {
 
   return (
     <div className={styles.container}>
-      <h1>Image Upload To Cloudinary</h1>
-      <input
-        type="file"
-        onChange={handleFileChange}
-        className={styles.fileInput}
-      />
-      <button onClick={handleUpload} className={styles.uploadButton}>
-        Upload
-      </button>
-      <p className={styles.uploadStatus}>{uploadStatus}</p>
+      <div className={styles.formcontainer}>
+        <h1>Image Upload To Cloudinary</h1>
+        <input
+          type="file"
+          onChange={handleFileChange}
+          className={styles.fileInput}
+        />
+        <button onClick={handleUpload} className={styles.uploadButton}>
+          Upload
+        </button>
+        <p className={styles.uploadStatus}>{uploadStatus}</p>
+      </div>
     </div>
   );
 }
