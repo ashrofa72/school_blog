@@ -14,7 +14,7 @@ export default function Home() {
           اسم يعني التميز&nbsp;
           <code className="font-mono font-bold">مدرسة فاطمة الزهراء</code>
         </p> */}
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
+        {/* <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
           <a
             className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
@@ -31,10 +31,10 @@ export default function Home() {
               priority
             />
           </a>
-        </div>
+        </div>*/}
         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
           <a
-            className="flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
+            className={`flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0 ${almarai.className}`}
             href="https://web.facebook.com/groups/536486061805055"
             target="_blank"
             rel="noopener noreferrer"
