@@ -30,7 +30,7 @@ const Firstcodes = () => {
   };
 
   return (
-    <div className="container text-center">
+    <div class="container text-center h-full">
       <h1 className="display-5 p-3">بيانات طلاب الصف الثاني</h1>
       <div className="row row-cols-12">
         {/* <div className='col-6'>
@@ -75,7 +75,7 @@ const Firstcodes = () => {
 
               <Button
                 variant="contained"
-                className="text-black"
+                className="text-white"
                 onClick={handleSearchName}
               >
                 Search
