@@ -272,6 +272,7 @@ function ResponsiveAppBar() {
                   {user ? (
                     <>
                       <Avatar alt="User Logged" src="Images/Ashraf.jpg" />
+
                       <span
                         style={{
                           direction: 'ltr',
@@ -279,7 +280,7 @@ function ResponsiveAppBar() {
                           color: 'white',
                         }}
                       >
-                        {user ? auth.currentUser.email : 'no user'}
+                        if (user){user ? auth.currentUser.email : 'no user'}
                       </span>
                       <span
                         style={{
@@ -288,6 +289,7 @@ function ResponsiveAppBar() {
                           color: 'white',
                         }}
                       >
+                        if (user)
                         {user ? auth.currentUser.phoneNumber : 'no user'}
                       </span>
                     </>
