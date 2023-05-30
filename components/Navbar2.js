@@ -281,8 +281,22 @@ function ResponsiveAppBar() {
                           color: 'white',
                         }}
                       >
-                        {user ? <p> {user.email}</p> : <p>No user</p>}
-                        {user ? <p> {user.phoneNumber}</p> : <p>No user</p>}
+                        {user ? (
+                          <span style={{ fontSize: '13px' }}>
+                            {' '}
+                            {user.email}
+                          </span>
+                        ) : (
+                          <span>No user</span>
+                        )}
+                        {user ? (
+                          <span style={{ fontSize: '13px' }}>
+                            {' '}
+                            {user.phoneNumber}
+                          </span>
+                        ) : (
+                          <span>No user</span>
+                        )}
                       </span>
                       <span
                         style={{
