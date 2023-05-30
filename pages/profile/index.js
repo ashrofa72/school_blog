@@ -18,13 +18,6 @@ const Profile = () => {
           <h2>No user available.</h2>
         )}
       </div>
-      <div>
-        {user ? (
-          <h2>Created at: {auth.currentUser.metadata.creationTime}</h2>
-        ) : (
-          <h2>No user available.</h2>
-        )}
-      </div>
     </div>
   );
 };
