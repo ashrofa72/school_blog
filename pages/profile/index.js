@@ -8,14 +8,14 @@ const Profile = () => {
   return (
     <div className={styles.container}>
       <h1>Profile Page</h1>
-
-      <p>
-        User Creation Date :
-        {!user ? 'no user' : auth.currentUser.metadata.creationTime}
-      </p>
-
-      <p>User Email : {!user ? 'no user' : auth.currentUser.email}</p>
-      <p>Mobile Number : {!user ? 'no user' : auth.currentUser.phoneNumber}</p>
+      <div>
+        {user ? <p>Email: {user.email}</p> : <p>No user available.</p>}
+        {user ? (
+          <p>Mobile: {auth.currentUser.phoneNumber}</p>
+        ) : (
+          <p>No user available.</p>
+        )}
+      </div>
     </div>
   );
 };

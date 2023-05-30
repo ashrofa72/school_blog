@@ -280,9 +280,7 @@ function ResponsiveAppBar() {
                           marginRight: '5px',
                           color: 'white',
                         }}
-                      >
-                        {!user ? 'no user' : auth.currentUser.email}
-                      </span>
+                      ></span>
                       <span
                         style={{
                           direction: 'ltr',
@@ -290,7 +288,8 @@ function ResponsiveAppBar() {
                           color: 'white',
                         }}
                       >
-                        {!user ? 'no user' : auth.currentUser.phoneNumber}
+                        {user ? <p> {user.email}</p> : <p>No user</p>}
+                        {user ? <p> {user.phoneNumber}</p> : <p>No user</p>}
                       </span>
                     </>
                   ) : (
