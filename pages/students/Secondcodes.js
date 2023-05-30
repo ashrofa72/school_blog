@@ -31,7 +31,7 @@ const Firstcodes = () => {
   };
 
   return (
-    <div class="container text-center" style={{ height: '83vh' }}>
+    <div class="container text-center" style={{ height: '80vh' }}>
       <Box
         sx={{
           display: 'flex',
@@ -41,11 +41,11 @@ const Firstcodes = () => {
           alignItems: 'center',
         }}
       >
-        <Typography variant="h4" sx={{ fontFamily: 'Almarai', mb: 4 }}>
+        <Typography variant="h4" sx={{ fontFamily: 'Almarai', mb: 4, mt: 4 }}>
           بيانات طلاب الصف الثاني
         </Typography>
         <Typography variant="h5" sx={{ fontFamily: 'Almarai', mb: 4 }}>
-          ابحث هنا بالرقم القومي للحصول على بيانات الطالبة
+          ابحث هنا بالرقم القومي للحصول على بيانات كود الطالبة
         </Typography>
         <div className="row row-cols-12">
           {/* <div className='col-6'>
