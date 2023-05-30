@@ -63,6 +63,7 @@ function ResponsiveAppBar() {
     const pageindex3 = pages.indexOf('Signin');
     const pageindex = [0, 1, 2, 3, 4];
   };
+
   return (
     <>
       <AppBar position="static" dir="rtl">
@@ -280,7 +281,7 @@ function ResponsiveAppBar() {
                           color: 'white',
                         }}
                       >
-                        if (user){user ? auth.currentUser.email : 'no user'}
+                        {/* if (user){user ? auth.currentUser.email : 'no user'}*/}
                       </span>
                       <span
                         style={{
@@ -289,8 +290,7 @@ function ResponsiveAppBar() {
                           color: 'white',
                         }}
                       >
-                        if (user)
-                        {user ? auth.currentUser.phoneNumber : 'no user'}
+                        {/* if (user) {user ? auth.currentUser.phoneNumber : 'no user'} */}
                       </span>
                     </>
                   ) : (
