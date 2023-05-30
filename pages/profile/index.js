@@ -20,7 +20,7 @@ const Profile = () => {
       </div>
       <div>
         {user ? (
-          <h2>Mobile: {auth.currentUser.metadata.creationTime}</h2>
+          <h2>Created at: {user.metadata.creationTime}</h2>
         ) : (
           <h2>No user available.</h2>
         )}
