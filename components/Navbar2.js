@@ -289,7 +289,6 @@ function ResponsiveAppBar() {
                         }}
                       >
                         {user ? <p> {user.email}</p> : <p>No user</p>}
-                        {user ? <p> {user.phoneNumber}</p> : <p>No user</p>}
                       </span>
                     </>
                   ) : (
