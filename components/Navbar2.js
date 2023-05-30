@@ -270,7 +270,27 @@ function ResponsiveAppBar() {
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   {user ? (
-                    <Avatar alt="User Logged" src="Images/Ashraf.jpg" />
+                    <>
+                      <Avatar alt="User Logged" src="Images/Ashraf.jpg" />
+                      <span
+                        style={{
+                          direction: 'ltr',
+                          marginRight: '5px',
+                          color: 'white',
+                        }}
+                      >
+                        {auth.currentUser.email}
+                      </span>
+                      <span
+                        style={{
+                          direction: 'ltr',
+                          marginRight: '5px',
+                          color: 'white',
+                        }}
+                      >
+                        {auth.currentUser.phoneNumber}
+                      </span>
+                    </>
                   ) : (
                     <Avatar alt="User Signed out" src="Images/Navuser.jpg" />
                   )}
