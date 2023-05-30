@@ -9,6 +9,9 @@ const Profile = () => {
     <div className={styles.container}>
       <h1>Profile Page</h1>
       <div>{user ? <p>Email: {user.email}</p> : <p>No user available.</p>}</div>
+      <div>
+        {user ? <p>Mobile: {user.phoneNumber}</p> : <p>No user available.</p>}
+      </div>
     </div>
   );
 };

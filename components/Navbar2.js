@@ -280,16 +280,17 @@ function ResponsiveAppBar() {
                           marginRight: '5px',
                           color: 'white',
                         }}
-                      ></span>
+                      >
+                        {user ? <p> {user.email}</p> : <p>No user</p>}
+                        {user ? <p> {user.phoneNumber}</p> : <p>No user</p>}
+                      </span>
                       <span
                         style={{
                           direction: 'ltr',
                           marginRight: '5px',
                           color: 'white',
                         }}
-                      >
-                        {user ? <p> {user.email}</p> : <p>No user</p>}
-                      </span>
+                      ></span>
                     </>
                   ) : (
                     <Avatar alt="User Signed out" src="Images/Navuser.jpg" />
