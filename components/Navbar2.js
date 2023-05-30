@@ -279,7 +279,7 @@ function ResponsiveAppBar() {
                           color: 'white',
                         }}
                       >
-                        {auth.currentUser.email}
+                        {user && auth.currentUser.email}
                       </span>
                       <span
                         style={{
@@ -288,7 +288,7 @@ function ResponsiveAppBar() {
                           color: 'white',
                         }}
                       >
-                        {auth.currentUser.phoneNumber}
+                        {user && auth.currentUser.phoneNumber}
                       </span>
                     </>
                   ) : (
