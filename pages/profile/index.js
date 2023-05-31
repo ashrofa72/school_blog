@@ -18,13 +18,13 @@ const Profile = () => {
           <h2>No user available.</h2>
         )}
       </div>
-      <div>
+      {/*<div>
         {user ? (
           <p>User uid:{auth.currentUser.uid}</p>
         ) : (
           <h2>No user available.</h2>
         )}
-      </div>
+      </div>*/}
       {/*<div>
         {user ? (
           <p>User creationTime:{auth.currentUser.metadata.creationTime}</p>
