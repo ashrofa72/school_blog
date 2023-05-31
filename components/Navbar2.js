@@ -289,7 +289,12 @@ function ResponsiveAppBar() {
                           <span>No user</span>
                         )}
                         {user ? (
-                          <span style={{ fontSize: '13px' }}>
+                          <span
+                            style={{
+                              fontSize: '13px',
+                              display: 'inline-block',
+                            }}
+                          >
                             {' '}
                             {user.phoneNumber}
                           </span>
