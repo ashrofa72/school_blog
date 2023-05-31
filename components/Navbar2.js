@@ -221,6 +221,20 @@ function ResponsiveAppBar() {
                     fontWeight: 'bold',
                     fontSize: '18px',
                   }}
+                  onClick={(e) => router.push('/savedata')}
+                >
+                  حفظ
+                </Button>
+              )}
+              {user && (
+                <Button
+                  sx={{
+                    my: 2,
+                    color: 'white',
+                    display: 'block',
+                    fontWeight: 'bold',
+                    fontSize: '18px',
+                  }}
                   onClick={(e) => router.push('/blogform')}
                 >
                   انشاء

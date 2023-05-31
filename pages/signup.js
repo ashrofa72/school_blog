@@ -10,6 +10,9 @@ const Signup = () => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const [password, setPassword] = useState('');
+  const [mobile, setMobile] = useState('');
+  const [nationalid, setNationalid] = useState('');
+  const [displayName, setDisplayName] = useState('');
   const { signUp } = useUserAuth();
   let router = useRouter();
 
@@ -55,8 +58,18 @@ const Signup = () => {
           >
             <Form.Control
               type="text"
+              placeholder=" الرقم القومي"
+              onChange={(e) => setNationalid(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group
+            className={styles.formgroup}
+            controlId="formBasicPassword"
+          >
+            <Form.Control
+              type="text"
               placeholder="رقم الموبايل"
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => setMobile(e.target.value)}
             />
           </Form.Group>
 
@@ -67,7 +80,7 @@ const Signup = () => {
             <Form.Control
               type="text"
               placeholder="اسم المستخدم"
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => setDisplayName(e.target.value)}
             />
           </Form.Group>
 
