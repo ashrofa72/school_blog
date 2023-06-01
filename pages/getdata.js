@@ -23,15 +23,19 @@ const DataList = () => {
 
   return (
     <div className={styles.container}>
-      <h2>بيانات المسجلين على المنصة</h2>
-      <ul>
-        {data.map((item) => (
-          <li key={item.id}>
-            <strong>DisplayName:</strong> {item.formData.displayName},{' '}
-            <strong>Email:</strong> {item.formData.email}
-          </li>
-        ))}
-      </ul>
+      <h2 className="text-4xl text-gray-500 text-center">
+        بيانات المسجلين على المنصة
+      </h2>
+      <div className="text-center mt-5 text-xl">
+        <ul>
+          {data.map((item) => (
+            <li key={item.id}>
+              <strong>DisplayName:</strong> {item.formData.displayName},{' '}
+              <strong>Email:</strong> {item.formData.email}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
