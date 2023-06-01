@@ -25,13 +25,13 @@ const Profile = () => {
           <h2>No user available.</h2>
         )}
       </div>*/}
-      {/*<div>
+      <div>
         {user ? (
-          <p>User creationTime:{auth.currentUser.metadata.creationTime}</p>
+          <p>User lastSignInTime:{user.metadata.lastSignInTime}</p>
         ) : (
           <h2>No user available.</h2>
         )}
-      </div>*/}
+      </div>
     </div>
   );
 };
