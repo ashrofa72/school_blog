@@ -3,6 +3,7 @@ import firebase from 'firebase/app';
 import { db } from '../config/firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import styles from '../styles/savedata.module.css';
+import Link from 'next/link';
 
 import { useUserAuth } from '../context/UserAuthContext';
 
@@ -88,6 +89,9 @@ export default function Home() {
         <button className={styles.button} type="submit">
           Submit
         </button>
+        <div>
+          <Link href="/getdata">Get Data</Link>
+        </div>
       </form>
     </div>
   );
