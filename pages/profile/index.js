@@ -5,31 +5,38 @@ import { auth } from '../../config/firebase';
 
 const Profile = () => {
   const { user } = useUserAuth();
+  const handleuser = () => {
+    const user = auth.currentUser;
+    if (user) {
+      const { displayName, phoneNumber } = user;
+      console.log('Display Name:', displayName);
+      console.log('Phone Number:', phoneNumber);
+    } else {
+      console.log('User not logged in');
+    }
+  };
   return (
     <div className={styles.container}>
-      <h1>Profile Page</h1>
+      <h1 className="text-3xl text-center">بيانات تسجيل الدخول لصاحب الحساب</h1>
       <div>
-        {user ? <h2>Email: {user.email}</h2> : <h2>No user available.</h2>}
+        {user.email ? (
+          <h2>Email: {user.email}</h2>
+        ) : (
+          <h2>No user email available.</h2>
+        )}
       </div>
       <div>
-        {user ? (
+        {user.displayName ? (
+          <h2>Display Name: {user.displayName}</h2>
+        ) : (
+          <h2>No user display Name available.</h2>
+        )}
+      </div>
+      <div>
+        {user.phoneNumber ? (
           <h2>Mobile: {user.phoneNumber}</h2>
         ) : (
-          <h2>No user available.</h2>
-        )}
-      </div>
-      {/*<div>
-        {user ? (
-          <p>User uid:{auth.currentUser.uid}</p>
-        ) : (
-          <h2>No user available.</h2>
-        )}
-      </div>*/}
-      <div>
-        {user ? (
-          <p>User lastSignInTime:{user.metadata.lastSignInTime}</p>
-        ) : (
-          <h2>No user available.</h2>
+          <h2>No user Mobile available.</h2>
         )}
       </div>
     </div>

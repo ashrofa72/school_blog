@@ -45,6 +45,9 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <h1>تسجيل بيانات المستخدم الجديد</h1>
+      <div>
+        <Link href="/getdata">Get Data</Link>
+      </div>
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.formgroup}>
           <label>البريد الإلكتروني</label>
@@ -89,9 +92,6 @@ export default function Home() {
         <button className={styles.button} type="submit">
           Submit
         </button>
-        <div>
-          <Link href="/getdata">Get Data</Link>
-        </div>
       </form>
     </div>
   );

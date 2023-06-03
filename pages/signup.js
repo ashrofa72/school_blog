@@ -4,23 +4,39 @@ import { useRouter } from 'next/router';
 import { Form, Alert } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { useUserAuth } from '../context/UserAuthContext';
+import { auth } from '../config/firebase';
 import styles from '../styles/signup.module.css';
+import { updateProfile } from 'firebase/auth';
 
 const Signup = () => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const [password, setPassword] = useState('');
-  const [mobile, setMobile] = useState('');
-  const [nationalid, setNationalid] = useState('');
+
   const [displayName, setDisplayName] = useState('');
   const { signUp } = useUserAuth();
   let router = useRouter();
+  const { user } = useUserAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     try {
       await signUp(email, password);
+
+      updateProfile(auth.currentUser, {
+        displayName: displayName,
+      })
+        .then(() => {
+          // Profile updated!
+          console.log('profile updated');
+          // ...
+        })
+        .catch((error) => {
+          // An error occurred
+          // ...
+        });
+
       router.push('/');
     } catch (err) {
       setError(err.message);
@@ -49,27 +65,6 @@ const Signup = () => {
               type="password"
               placeholder="كلمة المرور"
               onChange={(e) => setPassword(e.target.value)}
-            />
-          </Form.Group>
-
-          <Form.Group
-            className={styles.formgroup}
-            controlId="formBasicPassword"
-          >
-            <Form.Control
-              type="text"
-              placeholder=" الرقم القومي"
-              onChange={(e) => setNationalid(e.target.value)}
-            />
-          </Form.Group>
-          <Form.Group
-            className={styles.formgroup}
-            controlId="formBasicPassword"
-          >
-            <Form.Control
-              type="text"
-              placeholder="رقم الموبايل"
-              onChange={(e) => setMobile(e.target.value)}
             />
           </Form.Group>
 
