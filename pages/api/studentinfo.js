@@ -49,9 +49,9 @@ async function getPosts(req, res) {
 async function addPost(req, res) {
   try {
     let { db } = await connectToDatabase();
-    await db.collection('student_inquery').insertOne(JSON.parse(req.body));
+    await db.collection('myschoolusers').insertOne(JSON.parse(req.body));
     return res.json({
-      message: 'Post added successfully',
+      message: 'User Data added successfully',
       success: true,
     });
   } catch (error) {

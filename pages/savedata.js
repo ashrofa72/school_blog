@@ -4,6 +4,7 @@ import { db } from '../config/firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import styles from '../styles/savedata.module.css';
 import Link from 'next/link';
+import axios from 'axios';
 
 import { useUserAuth } from '../context/UserAuthContext';
 
@@ -13,10 +14,12 @@ export default function Home() {
   const [nationalId, setNationalId] = useState('');
   const [mobile, setMobile] = useState('');
   const [displayName, setDisplayName] = useState('');
+  const [error, setError] = useState('');
+  const [message, setMessage] = useState('');
 
   const { user } = useUserAuth();
 
-  const handleSubmit = async (e) => {
+  const handleSubmitfirebase = async (e) => {
     e.preventDefault();
 
     // Save form data to Firebase Realtime Database
@@ -41,14 +44,62 @@ export default function Home() {
     setMobile('');
     setDisplayName('');
   };
+  const handlesubmitmongodb = async (e) => {
+    e.preventDefault();
+    // fields check
+    if (!email || !password || !nationalId || !mobile || !displayName)
+      return setError('All fields are required');
 
+    // post structure
+    let userData = {
+      email,
+      password,
+      nationalId,
+      mobile,
+      displayName,
+      createdAt: new Date().toISOString(),
+    };
+    // save the post
+    let response = await fetch('/api/studentinfo/', {
+      method: 'POST',
+      body: JSON.stringify(userData),
+    });
+    // get the data
+    let data = await response.json();
+
+    if (data.success) {
+      // reset the fields
+      setEmail('');
+      setPassword('');
+      setNationalId('');
+      setMobile('');
+      setDisplayName('');
+      // set the message
+      return setMessage(data.message);
+    } else {
+      // set the error
+      return setError(data.message);
+    }
+  };
   return (
     <div className={styles.container}>
       <h1>تسجيل بيانات المستخدم الجديد</h1>
-      <div>
-        <Link href="/getdata">Get Data</Link>
+      <div className="font-bold text-center underline">
+        <Link href="/getdata">بيانات المسجلين</Link>
       </div>
-      <form onSubmit={handleSubmit} className={styles.form}>
+      <div>
+        {error ? (
+          <div className="text-center text-red-500 font-bold">
+            <h3 className={styles.error}>{error}</h3>
+          </div>
+        ) : null}
+        {message ? (
+          <div className="text-center text-green-500 font-bold ">
+            <h3 className={styles.message}>{message}</h3>
+          </div>
+        ) : null}
+      </div>
+      <form onSubmit={handlesubmitmongodb} className={styles.form}>
         <div className={styles.formgroup}>
           <label>البريد الإلكتروني</label>
           <input
