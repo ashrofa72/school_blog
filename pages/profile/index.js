@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../../styles/profile.module.css';
 import { useUserAuth } from '../../context/UserAuthContext';
 import { auth } from '../../config/firebase';
 
 const Profile = () => {
   const { user } = useUserAuth();
+  const [usermobile, setuserMobile] = useState([]);
   const handleuser = () => {
     const user = auth.currentUser;
     if (user) {
@@ -14,6 +15,15 @@ const Profile = () => {
     } else {
       console.log('User not logged in');
     }
+  };
+  const handlesearch = async (mobile) => {
+    //alert('wait')
+
+    const response = await fetch(`/api/mobileSearch?mobile=${mobile}`);
+    const data = await response.json();
+    const mobiles = JSON.parse(JSON.stringify(data.message));
+    setuserMobile(mobiles);
+    console.log(data.message);
   };
   return (
     <div className={styles.container}>
@@ -38,6 +48,24 @@ const Profile = () => {
         ) : (
           <h2>No user Mobile available.</h2>
         )}
+      </div>
+      <div>
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          onClick={() => handlesearch(user.phoneNumber)}
+        >
+          بيانات المستخدم
+        </button>
+      </div>
+      <div className={styles.searchdata}>
+        {usermobile.map((user, i) => (
+          <div key={i}>
+            <h2>User Email: {user.email}</h2>
+            <p>User DisplayName: {user.displayName}</p>
+            <p>User National ID: {user.nationalId}</p>
+            <p>User Mobile: {user.mobile}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

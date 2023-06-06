@@ -83,7 +83,7 @@ export default function Home() {
   };
   return (
     <div className={styles.container}>
-      <h1>تسجيل بيانات المستخدم الجديد</h1>
+      <h1 className="text-center">تسجيل بيانات المستخدم الجديد</h1>
       <div className="font-bold text-center underline">
         <Link href="/getdata">بيانات المسجلين</Link>
       </div>
