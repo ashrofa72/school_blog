@@ -77,7 +77,7 @@ export default function BlogsPage({ blogs }) {
 export async function getServerSideProps() {
   const { db } = await connectToDatabase();
   const blogsCollection = db.collection('blog');
-  const blogs = await blogsCollection.find({}).toArray();
+  const blogs = await blogsCollection.find({}).sort({ _id: -1 }).toArray();
   return {
     props: {
       blogs: JSON.parse(JSON.stringify(blogs)),
