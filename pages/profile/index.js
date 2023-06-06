@@ -54,7 +54,7 @@ const Profile = () => {
           class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           onClick={() => handlesearch(user.phoneNumber)}
         >
-          بيانات المستخدم
+          إظهار بياناتك
         </button>
       </div>
       <div className={styles.searchdata}>

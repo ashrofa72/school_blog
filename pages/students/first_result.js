@@ -30,7 +30,7 @@ export default function StudentResultPage() {
         height: '100vh',
       }}
     >
-      <Typography variant="h4" fontFamily="Almarai">
+      <Typography variant="h4" fontFamily="Almarai" textAlign="center">
         {' '}
         الحصول على نتيجة الطالبة باستخدام الرقم القومي
       </Typography>

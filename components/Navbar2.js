@@ -71,7 +71,7 @@ function ResponsiveAppBar() {
           <Toolbar disableGutters>
             <SchoolIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
             {/*--------------------------------------------------------------------------------------*/}
-            {/* Minmized header menu left side*/}
+            {/* Minmized header menu right side*/}
             <Typography
               variant="h8"
               noWrap
@@ -271,7 +271,8 @@ function ResponsiveAppBar() {
                 </Button>
               )}
             </Box>
-            {/* Left menu user Avatar */}
+            {/* Left menu user Avatar 
+            -----------------------------------------------------------------------------------*/}
             <Box sx={{ flexGrow: 0 }}>
               <span
                 style={{
