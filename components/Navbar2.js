@@ -285,45 +285,56 @@ function ResponsiveAppBar() {
               </span>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  {user ? (
-                    <>
-                      <span
-                        style={{
-                          direction: 'ltr',
-                          marginLeft: '5px',
-                          color: 'white',
-                          fontWeight: 'bold',
-                        }}
-                      >
-                        {user ? (
-                          <span style={{ fontSize: '13px' }}>
-                            {' '}
-                            {user.email}
-                          </span>
-                        ) : (
-                          <span>No user</span>
-                        )}
-                        {user ? (
-                          <span
-                            style={{
-                              fontSize: '13px',
-                              display: 'inline-block',
-                            }}
-                          >
-                            {' '}
-                            {user.phoneNumber}
-                          </span>
-                        ) : (
-                          <span>No user</span>
-                        )}
-                      </span>
-                      <Avatar alt="User Logged" src="Images/Ashraf.jpg" />
-                    </>
-                  ) : (
-                    <Avatar alt="User Signed out" src="Images/Navuser.jpg" />
-                  )}
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column-reverse',
+                      alignItems: 'center',
+                      alignContent: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    {user ? (
+                      <>
+                        <span
+                          style={{
+                            direction: 'ltr',
+                            marginLeft: '5px',
+                            color: 'white',
+                            fontWeight: 'bold',
+                          }}
+                        >
+                          {user ? (
+                            <span style={{ fontSize: '13px' }}>
+                              {' '}
+                              {user.email}
+                            </span>
+                          ) : (
+                            <span>No user</span>
+                          )}
+                          {user ? (
+                            <span
+                              style={{
+                                fontSize: '13px',
+                                display: 'block',
+                              }}
+                            >
+                              {' '}
+                              {user.phoneNumber}
+                            </span>
+                          ) : (
+                            <span>No user</span>
+                          )}
+                        </span>
+                        <Avatar alt="User Logged" src="Images/Ashraf.jpg" />
+                      </>
+                    ) : (
+                      <Avatar alt="User Signed out" src="Images/Navuser.jpg" />
+                    )}
+                  </div>
                 </IconButton>
               </Tooltip>
+
               <Menu
                 sx={{ mt: '45px' }}
                 id="menu-appbar"
