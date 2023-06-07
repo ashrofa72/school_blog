@@ -305,7 +305,9 @@ function ResponsiveAppBar() {
                           }}
                         >
                           {user ? (
-                            <span style={{ fontSize: '13px' }}>
+                            <span
+                              style={{ fontSize: '13px', display: 'block' }}
+                            >
                               {' '}
                               {user.email}
                             </span>
