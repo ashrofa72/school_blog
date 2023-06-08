@@ -289,9 +289,8 @@ function ResponsiveAppBar() {
                     style={{
                       display: 'flex',
                       flexDirection: 'column-reverse',
-                      alignItems: 'center',
-                      alignContent: 'center',
-                      justifyContent: 'center',
+                      alignContent: 'flex-end',
+                      alignItems: 'flex-end',
                     }}
                   >
                     {user ? (
