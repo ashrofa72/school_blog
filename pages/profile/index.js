@@ -27,7 +27,9 @@ const Profile = () => {
   };
   return (
     <div className={styles.container}>
-      <h1 className="text-3xl text-center">بيانات تسجيل الدخول لصاحب الحساب</h1>
+      <h1 style={{ fontFamily: 'Almarai' }} className="text-3xl text-center">
+        بيانات تسجيل الدخول لصاحب الحساب
+      </h1>
       <div>
         {user.email ? (
           <h2>Email: {user.email}</h2>
