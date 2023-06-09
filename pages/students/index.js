@@ -34,7 +34,11 @@ const Students = () => {
             <ListItemText
               primary="الحصول على كود الطالبة"
               primaryTypographyProps={{
-                sx: { fontFamily: 'Almarai', fontWeight: 'bold' },
+                sx: {
+                  fontFamily: 'Almarai',
+                  fontWeight: 'bold',
+                  color: 'black',
+                },
               }}
               secondaryTypographyProps={{
                 sx: {
@@ -58,7 +62,11 @@ const Students = () => {
             <ListItemText
               primary="الحصول على نتيجة الطالبة"
               primaryTypographyProps={{
-                sx: { fontFamily: 'Almarai', fontWeight: 'bold' },
+                sx: {
+                  fontFamily: 'Almarai',
+                  fontWeight: 'bold',
+                  color: 'black',
+                },
               }}
               secondaryTypographyProps={{
                 sx: {

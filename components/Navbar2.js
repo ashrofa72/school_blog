@@ -78,17 +78,17 @@ function ResponsiveAppBar() {
               component="a"
               href="/"
               sx={{
-                mr: 0,
+                mr: 1,
                 display: { xs: 'none', md: 'flex' },
-                fontFamily: 'monospace',
+                fontFamily: 'Almarai',
                 fontWeight: 'bold',
                 fontSize: '15px',
-                letterSpacing: '.3rem',
+                //letterSpacing: '.3rem',
                 color: 'inherit',
                 textDecoration: 'none',
               }}
             >
-              Fatmah School
+              مدرسة فاطمةالزهراء
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
@@ -121,7 +121,11 @@ function ResponsiveAppBar() {
               >
                 {user && (
                   <MenuItem key={0} onClick={(e) => router.push('/')}>
-                    <Typography textAlign="center" fontWeight="bold">
+                    <Typography
+                      textAlign="center"
+                      fontWeight="bold"
+                      fontFamily="Almarai"
+                    >
                       الرئيسة
                     </Typography>
                   </MenuItem>
@@ -129,7 +133,11 @@ function ResponsiveAppBar() {
 
                 {user && (
                   <MenuItem key={4} onClick={(e) => router.push('/about')}>
-                    <Typography textAlign="center" fontWeight="bold">
+                    <Typography
+                      textAlign="center"
+                      fontWeight="bold"
+                      fontFamily="Almarai"
+                    >
                       حول
                     </Typography>
                   </MenuItem>
@@ -137,14 +145,22 @@ function ResponsiveAppBar() {
 
                 {user && (
                   <MenuItem key={4} onClick={(e) => router.push('/blogform')}>
-                    <Typography textAlign="center" fontWeight="bold">
+                    <Typography
+                      textAlign="center"
+                      fontWeight="bold"
+                      fontFamily="Almarai"
+                    >
                       انشاء
                     </Typography>
                   </MenuItem>
                 )}
                 {user && (
                   <MenuItem key={1} onClick={(e) => router.push('/blogs')}>
-                    <Typography textAlign="center" fontWeight="bold">
+                    <Typography
+                      textAlign="center"
+                      fontWeight="bold"
+                      fontFamily="Almarai"
+                    >
                       الأخبار
                     </Typography>
                   </MenuItem>
@@ -152,7 +168,11 @@ function ResponsiveAppBar() {
 
                 {user && (
                   <MenuItem key={4} onClick={(e) => router.push('/contact')}>
-                    <Typography textAlign="center" fontWeight="bold">
+                    <Typography
+                      textAlign="center"
+                      fontWeight="bold"
+                      fontFamily="Almarai"
+                    >
                       تواصل
                     </Typography>
                   </MenuItem>
@@ -168,18 +188,18 @@ function ResponsiveAppBar() {
               component="a"
               href="/"
               sx={{
-                mr: 0,
+                mr: 1,
                 display: { xs: 'flex', md: 'none' },
                 flexGrow: 1,
-                fontFamily: 'monospace',
+                fontFamily: 'Almarai',
                 fontSize: '15px',
                 fontWeight: 'bold',
-                letterSpacing: '.3rem',
+                //letterSpacing: '.3rem',
                 color: 'inherit',
                 textDecoration: 'none',
               }}
             >
-              Fatmah School
+              مدرسة فاطمةالزهراء
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {user && (
@@ -191,6 +211,7 @@ function ResponsiveAppBar() {
                     display: 'block',
                     fontWeight: 'bold',
                     fontSize: '18px',
+                    fontFamily: 'Almarai',
                   }}
                   onClick={(e) => router.push('/')}
                 >
@@ -206,6 +227,7 @@ function ResponsiveAppBar() {
                     display: 'block',
                     fontWeight: 'bold',
                     fontSize: '18px',
+                    fontFamily: 'Almarai',
                   }}
                   onClick={(e) => router.push('/blogs')}
                 >
@@ -220,6 +242,7 @@ function ResponsiveAppBar() {
                     display: 'block',
                     fontWeight: 'bold',
                     fontSize: '18px',
+                    fontFamily: 'Almarai',
                   }}
                   onClick={(e) => router.push('/savedata')}
                 >
@@ -234,6 +257,7 @@ function ResponsiveAppBar() {
                     display: 'block',
                     fontWeight: 'bold',
                     fontSize: '18px',
+                    fontFamily: 'Almarai',
                   }}
                   onClick={(e) => router.push('/blogform')}
                 >
@@ -249,6 +273,7 @@ function ResponsiveAppBar() {
                     display: 'block',
                     fontWeight: 'bold',
                     fontSize: '18px',
+                    fontFamily: 'Almarai',
                   }}
                   onClick={(e) => router.push('/about')}
                 >
@@ -264,6 +289,7 @@ function ResponsiveAppBar() {
                     display: 'block',
                     fontWeight: 'bold',
                     fontSize: '18px',
+                    fontFamily: 'Almarai',
                   }}
                   onClick={(e) => router.push('/contact')}
                 >
@@ -357,9 +383,10 @@ function ResponsiveAppBar() {
                     <Typography
                       textAlign="center"
                       fontWeight="bold"
+                      fontFamily="Almarai"
                       onClick={(e) => router.push('/profile')}
                     >
-                      Profile
+                      الملف الشخصي
                     </Typography>
                   </MenuItem>
                 )}
@@ -368,9 +395,10 @@ function ResponsiveAppBar() {
                     <Typography
                       textAlign="center"
                       fontWeight="bold"
+                      fontFamily="Almarai"
                       onClick={(e) => router.push('/account')}
                     >
-                      Account
+                      الحساب
                     </Typography>
                   </MenuItem>
                 )}
@@ -379,9 +407,10 @@ function ResponsiveAppBar() {
                     <Typography
                       textAlign="center"
                       fontWeight="bold"
+                      fontFamily="Almarai"
                       onClick={(e) => router.push('/dashboard')}
                     >
-                      Dashboard
+                      لوحة التحكم
                     </Typography>
                   </MenuItem>
                 )}
@@ -391,6 +420,7 @@ function ResponsiveAppBar() {
                       textAlign="center"
                       fontWeight="bold"
                       fontSize="20px"
+                      fontFamily="Almarai"
                       onClick={(e) => router.push('/login')}
                     >
                       دخول
@@ -403,6 +433,7 @@ function ResponsiveAppBar() {
                       textAlign="center"
                       fontSize="20px"
                       fontWeight="bold"
+                      fontFamily="Almarai"
                       onClick={(e) => router.push('/signup')}
                     >
                       تسجيل
@@ -414,9 +445,10 @@ function ResponsiveAppBar() {
                     <Typography
                       textAlign="center"
                       fontWeight="bold"
+                      fontFamily="Almarai"
                       onClick={logOut}
                     >
-                      Logout
+                      خروج
                     </Typography>
                   </MenuItem>
                 )}
