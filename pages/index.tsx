@@ -52,7 +52,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={`flex flex-col items-center ${almarai.className}`}>
+      <div className={`flex flex-col items-end ${almarai.className}`}>
         <Image
           className=""
           src="Images/234.svg"
