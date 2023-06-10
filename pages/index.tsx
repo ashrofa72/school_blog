@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import { Almarai } from 'next/font/google';
+import Link from 'next/link';
 const inter = Inter({ subsets: ['latin'] });
 const almarai = Almarai({ subsets: ['arabic'], weight: ['700'] });
 
@@ -75,10 +76,10 @@ export default function Home() {
       </div>
 
       <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
+        <Link
           href="/adspage"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
+          target="_self"
           rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
@@ -90,12 +91,12 @@ export default function Home() {
           <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-center`}>
             صفحة تهتم بإعلانات المدرسة والإعلانات الخارجية للمجتمع
           </p>
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="/students"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
+          target="_self"
           rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
@@ -107,12 +108,12 @@ export default function Home() {
           <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-center`}>
             صفحة تهتم بالطالبات وخدماتهم المدرسية&nbsp;والإجتماعية
           </p>
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="/teachers"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
+          target="_self"
           rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
@@ -124,12 +125,12 @@ export default function Home() {
           <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-center`}>
             صفحة تهتم بأمور المعلمين في المدرسة&nbsp;وخدماتهم
           </p>
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="/blogs"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
+          target="_self"
           rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
@@ -141,7 +142,7 @@ export default function Home() {
           <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-center`}>
             صفحة تهتم بأخبار المدرسة وجميع أنشطة المدرسة الأخرى
           </p>
-        </a>
+        </Link>
       </div>
     </main>
   );
