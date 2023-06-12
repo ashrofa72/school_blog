@@ -51,7 +51,7 @@ const Teachers = () => {
             />
           </ListItem>
         </Link>
-        <Link href="/teachers/teacherdetail">
+        <Link href="/teachers/teachersdata">
           <ListItem>
             <ListItemAvatar>
               <Avatar>

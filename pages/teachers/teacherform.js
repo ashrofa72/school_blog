@@ -6,25 +6,39 @@ export default function Teachers() {
   const [name, setName] = useState('');
   const [mobile, setMobile] = useState('');
   const [position, setPosition] = useState('');
+  const [error, setError] = useState('');
+  const [message, setMessage] = useState('');
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // fields check
+    if (!name || !mobile || !position)
+      return setError('All fields are required');
 
-    try {
-      // Send the form data to the API endpoint
-      const response = await axios.post('/api/addteachers', {
-        name,
-        mobile,
-        position,
-      });
+    // post structure
+    let TeacherData = {
+      name,
+      mobile,
+      position,
+      createdAt: new Date().toISOString(),
+    };
+    // save the post
+    let response = await fetch('/api/addteachers/', {
+      method: 'POST',
+      body: JSON.stringify(TeacherData),
+    });
+    // get the data
+    let data = await response.json();
 
-      console.log('Data saved:', response.data);
-
-      // Reset the form fields
+    if (data.success) {
+      // reset the fields
       setName('');
       setMobile('');
       setPosition('');
-    } catch (error) {
-      console.error('Error saving data:', error);
+      // set the message
+      return setMessage(data.message);
+    } else {
+      // set the error
+      return setError(data.message);
     }
   };
   // ...
@@ -32,6 +46,18 @@ export default function Teachers() {
   return (
     <div className={styles.container}>
       <h1>إدخال بيانات المعلم الأساسية</h1>
+      <div>
+        {error ? (
+          <div className="text-center text-red-500 font-bold">
+            <h3 className={styles.error}>{error}</h3>
+          </div>
+        ) : null}
+        {message ? (
+          <div className="text-center text-green-500 font-bold ">
+            <h3 className={styles.message}>{message}</h3>
+          </div>
+        ) : null}
+      </div>
       <form onSubmit={handleSubmit}>
         <div className={styles.formGroup}>
           <label className={styles.label} htmlFor="name">
