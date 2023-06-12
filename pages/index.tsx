@@ -37,7 +37,7 @@ export default function Home() {
           <a
             className={`flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0 ${almarai.className}`}
             href="https://web.facebook.com/groups/536486061805055"
-            target="_blank"
+            target="_self"
             rel="noopener noreferrer"
           >
             صفحة المدرسة الرسمية على الفيسبوك{' '}
