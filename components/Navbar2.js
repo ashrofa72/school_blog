@@ -315,8 +315,8 @@ function ResponsiveAppBar() {
                     style={{
                       display: 'flex',
                       flexDirection: 'column-reverse',
-                      alignContent: 'flex-end',
-                      alignItems: 'flex-end',
+                      alignContent: 'center',
+                      alignItems: 'center',
                     }}
                   >
                     {user ? (
